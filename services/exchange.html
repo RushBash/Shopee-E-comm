@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+}
+  main {
+    flex: 1; /* This makes the main content take up remaining space */
+  }
+        header {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #ee0979;
+  margin-bottom: 0; 
+}
+header h1 {
+  margin: 0;
+  font-size: 1.8rem; 
+  font-weight: bold;
+}
+
+header h1 a {
+  color: #fff; 
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+  color: #ffd700; 
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+.delivery-section {
+  background-color: #f8f9fa;
+  padding: 60px 30px;
+
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: nowrap; /* Force single row */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1; /* Equal space for all columns */
+  min-width: 200px; /* Prevent shrinking too much */
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #f9a825;
+}
+
+.footer-section a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #111;
+  font-size: 14px;
+  color: #aaa;
+  width: 100%;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.exchange-section {
+  background-color: #f0f4f8;
+  padding: 60px 30px;
+}
+
+.exchange-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.exchange-text {
+  flex: 1 1 500px;
+}
+
+.exchange-text h2 {
+  font-size: 2.2em;
+  color: #20c997;
+  margin-bottom: 20px;
+}
+
+.exchange-text p {
+  font-size: 1em;
+  color: #495057;
+  margin-bottom: 30px;
+}
+
+.exchange-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e2f7f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #0f5132;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.exchange-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #20c997;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.exchange-button:hover {
+  background-color: #198754;
+}
+
+.exchange-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .exchange-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .exchange-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">Shopee</a></h1>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="all-products.html">All Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html">🛒 Cart</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </header>
+      <section id="exchange-details" class="exchange-section">
+        <div class="exchange-container">
+          <div class="exchange-text">
+            <h2>🔁 Hassle-Free Product Exchange</h2>
+            <p>Changed your mind? No worries. Our easy exchange policy ensures you get what you truly want.</p>
+      
+            <div class="exchange-highlights">
+              <div class="highlight">
+                <span>✅</span>
+                <p>7-Day Exchange Window</p>
+              </div>
+              <div class="highlight">
+                <span>✅</span>
+                <p>Pickup from your doorstep</p>
+              </div>
+              <div class="highlight">
+                <span>✅</span>
+                <p>Instant replacement on select items</p>
+              </div>
+              <div class="highlight">
+                <span>✅</span>
+                <p>No extra charges for first exchange</p>
+              </div>
+            </div>
+      
+            <a href="/exchange-policy" class="exchange-button">View Exchange Policy</a>
+          </div>
+      
+          <div class="exchange-image">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Exchange Icon" />
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="footer-content">
+          <!-- Column 1: Social Media + Logo -->
+          <div class="footer-section social-media">
+            <div class="logo">
+              <h1>Shopee</h1>
+               </div>
+            <i class="fab fa-facebook-f"></i> Facebook</a>
+            <i class="fab fa-twitter"></i> Twitter</a>
+            <i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+            <div class="footer-section contact-info">
+            <h3>Get in Touch</h3>
+            <p>Email: support@shopee.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: 123, MG Road, Bangalore, India</p>
+          </div>
+          
+      
+          <!-- Column 3: Quick Links -->
+          <div class="footer-section menu">
+            <h3>Quick Links</h3>
+            <nav>
+              <a href="index.html">Home</a>
+              <a href="all-products.html">All Products</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+      
+          <!-- Column 4: Important Links -->
+          <div class="footer-section important-links">
+            <h3>Important Links</h3>
+            <nav>
+              <a href="#">Terms and Condition</a>
+              <a href="#">Shipping Details</a>
+              <a href="#">Privacy Policy</a>
+            </nav>
+          </div>
+        </div>
+      
+        <!-- Bottom Center Copyright -->
+        <div class="footer-bottom" style="text-align: center; padding: 10px 0; background-color: #f1f1f1;">
+          <p>&copy; 2025 Shopee. All rights reserved.</p>
+        </div>
+      </footer>
+      
+</body>
+<script>
+   document.querySelector('.learn-more[href="/services/exchange"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('exchange-details').scrollIntoView({ behavior: 'smooth' });
+});
+
+
+</script>
+</html>

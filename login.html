@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Shopee</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Shopee</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="all-products.html">All Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">🛒 Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <h2>Login to Shopee</h2>
+    <form onsubmit="return loginUser(event)">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required />
+
+      <button type="submit">Login</button>
+
+      <div class="form-options">
+        <label class="remember-me">
+          <input type="checkbox" id="rememberMe" />
+          <span>Remember Me</span>
+        </label>
+        <a href="reset.html" class="forgot-password">Forgot Password?</a>
+      </div>
+      
+
+      <div class="signup-link">
+        <p>New to Shopee? <a href="signup.html">Create an account</a></p>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section reserved">
+        <p>&copy; 2025 Shopee. All rights reserved.</p>
+      </div>
+      <div class="footer-section menu">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="all-products.html">All Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-section social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function loginUser(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        alert("Please enter both email and password.");
+        return false;
+      }
+
+      alert("Login successful!");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

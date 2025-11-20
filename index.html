@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Shopee</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Shopee</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="all-products.html">All Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">🛒 Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+  <main>
+  <section class="banner">
+    <div class="banner-image">
+      <img src="./images/product_1.png" alt="Wireless Headphones">
+    </div>
+    <div class="banner-content">
+      <h2>Special Discount Alert!🎉</h2>
+      <p>Get up to 50% off on selected items. Limited time offer!</p>
+      <a href="all-products.html" class="banner-btn">Shop Now</a>
+    </div>
+  </section>
+  <div id="discount-popup">
+    <p>🎉 Get 10% OFF on your first order! Use code: <span class="code">WELCOME10</span></p>
+    <button onclick="closePopup()" aria-label="Close">×</button>
+  </div>
+  
+  
+    <section class="new-arrivals">
+      <h2>New Arrivals</h2>
+      <div class="card-container">
+        
+        <!-- Card 1 -->
+        <div class="new-arrival-card">
+          <img src="./images/product_11.png" alt="Digital projector"/>
+          <h3>Digital projector</h3>
+          <p class="price">₹12,999</p>
+          <p class="rating">★★★★☆</p>
+          <button onclick="addToCart('Digital Projector')">Add to Cart</button>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="new-arrival-card image-first">
+          <img src="./images/product_12.png" alt="Wireless Bluetooth"/>  
+          <h3>Wireless Bluetooth</h3>
+          <p class="price">₹4,499</p>
+          <p class="rating">★★★☆☆</p>
+          <button onclick="addToCart('Wireless Bluetooth')">Add to Cart</button>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="new-arrival-card">
+          <img src="./images/product_14.png" alt="Charging Cables"/>  
+          <h3>Charging Cables</h3>
+          <p class="price">₹1,999</p>
+          <p class="rating">★★★★☆</p>
+          <button onclick="addToCart('Charging Cables')">Add to Cart</button>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="new-arrival-card">
+          <img src="./images/product_15.png" alt="Smart Watc"/>
+          <h3>Mp3 Player</h3>
+          <p class="price">₹3,499</p>
+          <p class="rating">★★★★★</p>
+          <button onclick="addToCart('Mp3 Player')">Add to Cart</button>
+        </div>
+    
+      </div>
+      
+    </section>
+    <section class="products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./images/product_1.png" alt="Wireless Bluetooth"/>
+          <h3>Wireless Bluetooth</h3>
+          <p>₹7,999</p>
+          <div class="stars">
+            <div class="star filled">★</div>
+            <div class="star filled">★</div>
+            <div class="star filled">★</div>
+            <div class="star filled">★</div>
+            <div class="star">☆</div>
+      </div>
+      <button onclick="addToCart('Wireless Bluetooth')">Add to Cart</button>
+      </div>
+        <div class="product-card">
+          <img src="./images/product_2.png" alt="SmartWatch"/>
+          <h3>SmartWatch</h3>
+          <p>₹2,999</p>
+          <div class="stars">
+            <div class="star filled">★</div>
+            <div class="star filled">★</div>
+            <div class="star filled">★</div>
+            <div class="star filled">★</div>
+            <div class="star">☆</div>
+      </div>
+      <button onclick="addToCart('SmartWatch')">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="./images/product_3.png" alt="Portable Charger"/>
+        <h3>Portable Charger</h3>
+        <p>₹2,149</p>
+        <div class="stars">
+          <div class="star filled">★</div>
+          <div class="star filled">★</div>
+          <div class="star filled">★</div>
+          <div class="star">☆</div>
+          <div class="star">☆</div>
+    </div>
+    <button onclick="addToCart('Portable Charger')">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="./images/product_4.png" alt="Gaming Mouse"/>
+      <h3>Gaming Mouse</h3>
+      <p>₹1,700</p>
+      <div class="stars">
+        <div class="star filled">★</div>
+        <div class="star filled">★</div>
+        <div class="star">☆</div>
+        <div class="star">☆</div>
+        <div class="star">☆</div>
+  </div>
+  <button onclick="addToCart('Gaming Mouse')">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="./images/product_5.png" alt="LED Desk Lamp"/>
+    <h3>LED Desk Lamp</h3>
+    <p>₹799</p>
+    <div class="stars">
+      <div class="star filled">★</div>
+      <div class="star filled">★</div>
+      <div class="star filled">★</div>
+      <div class="star filled">★</div>
+      <div class="star">☆</div>
+</div>
+<button onclick="addToCart('LED Desk Lamp')">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="./images/product_6.png" alt="USB-C Hub"/>
+  <h3>USB-C Hub</h3>
+  <p>₹1,199</p>
+  <div class="stars">
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star">☆</div>
+    <div class="star">☆</div>
+</div>
+<button onclick="addToCart('USB-C Hub')">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="./images/product_7.png" alt="Noise Cancelling Headphones"/>
+  <h3>Noise Cancelling Headphones</h3>
+  <p>₹3,999</p>
+  <div class="stars">
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star">☆</div>
+</div>
+<button onclick="addToCart('Noise Cancelling Headphones')">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="./images/product_8.png" alt="Smart Tripod"/>
+  <h3>Smart Tripod</h3>
+  <p>₹1,999</p>
+  <div class="stars">
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star">☆</div>
+    <div class="star">☆</div>
+</div>
+<button onclick="addToCart('Smart Tripod')">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="./images/product_9.png" alt="Projector"/>
+  <h3>Projector</h3>
+  <p>₹2,575</p>
+  <div class="stars">
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star">☆</div>
+</div>
+<button onclick="addToCart('Projector')">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="./images/product_10.png" alt="Wireless Keyboard"/>
+  <h3>Wireless Keyboard</h3>
+  <p>₹1,655</p>
+  <div class="stars">
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star filled">★</div>
+    <div class="star">☆</div>
+</div>
+<button onclick="addToCart('Wireless Keyboard')">Add to Cart</button>
+</div>
+    </section>
+    <section class="content-image-section">
+      <div class="content">
+        <h2>Exclusive Discount Coupon</h2>
+        <p>Use code <strong>SHOPEE20</strong> at checkout to get 20% off on your first purchase!</p>
+        <p>Hurry, offer valid till <strong>November 30, 2025</strong>.</p>
+        <a href="all-products.html" class="btn">Shop Now</a>
+      </div>
+      <div class="image">
+        <img src="./images/product_13.png" alt="Gadget Image">
+      </div>
+    </section>
+   
+
+
+    <section class="customer-reviews">
+      <h2>Our Happy Clients</h2>
+      <div class="review-card-container">
+        <div class="review-card">
+          <p class="review-text">Amazing service! Highly recommend to everyone.</p>
+          <div class="star-rating">★★★★★</div>
+          <div class="reviewer">
+            <img src="./images/person-1.jpg" alt="Client image"> 
+            <span class="reviewer-name">Priya Sharma</span>
+          </div>
+        </div>
+    
+        <div class="review-card">
+          <p class="review-text">Very professional and quick response time.</p>
+          <div class="star-rating">★★★★☆</div>
+          <div class="reviewer">
+            <img src="./images/person-5.jpg" alt="Client image"> 
+            <span class="reviewer-name">Rahul Verma</span>
+          </div>
+        </div>
+    
+        <div class="review-card">
+          <p class="review-text">Great experience, will come back again!</p>
+          <div class="star-rating">★★★★★</div>
+          <div class="reviewer">
+            <img src="./images/person-3.png" alt="Client image"> 
+            <span class="reviewer-name">Anita Rao</span>
+          </div>
+        </div>
+    
+        <div class="review-card">
+          <p class="review-text">Good support but delivery was a bit slow.</p>
+          <div class="star-rating">★★★☆☆</div>
+          <div class="reviewer">
+            <img src="./images/person-4.jpg" alt="Client image"> 
+            <span class="reviewer-name">Kiran Das</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommendations">
+      <h2>Recommended for You</h2>
+      <ul class="recommendation-list">
+        <li>Bluetooth Speaker</li>
+        <li>Fitness Tracker</li>
+        <li>Noise Cancelling Earbuds</li>
+      </ul>
+    </section>
+    <section id="services">
+      <h2 class="section-heading">Our Services</h2>
+      <div class="info-card-container">
+    
+        <!-- Fast Delivery -->
+        <div class="info-card">
+          <h3>🚀 Fast Delivery</h3>
+          <p>Get your products quickly with same-day or next-day delivery.</p>
+          <a class="learn-more" href="./services/delivery.html">Learn More</a>
+        </div>
+    
+        <!-- Easy Returns -->
+        <div class="info-card">
+          <h3>🔄 Easy Returns</h3>
+          <p>Hassle-free returns and quick refunds for your convenience.</p>
+          <a class="learn-more" href="./services/returns.html">Learn More</a>
+        </div>
+    
+        <!-- Exchange Offers -->
+        <div class="info-card">
+          <h3>♻️ Exchange Offers</h3>
+          <p>Trade in your old gadgets for discounts on new purchases.</p>
+          <a class="learn-more" href="./services/exchange.html">Learn More</a>
+        </div>
+    
+        <!-- EMI Options -->
+        <div class="info-card">
+          <h3>💳 EMI Options</h3>
+          <p>Buy now and pay later with flexible EMI plans at zero interest.</p>
+          <a class="learn-more" href="./services/emi.html">Learn More</a>
+        </div>
+    
+        <!-- Track Order -->
+        <div class="info-card">
+          <h3>📦 Track Order</h3>
+          <p>Check your order status in real-time.</p>
+          <a class="learn-more" href="./services/track.html">Learn More</a>
+        </div>
+    
+        <!-- Privacy Policy -->
+        <div class="info-card">
+          <h3>🔐 Privacy Policy</h3>
+          <p>Your data is safe with us. Read how we protect your privacy.</p>
+          <a class="learn-more" href="./services/privacy.html">Learn More</a>
+        </div>
+    
+        <!-- Gift Vouchers -->
+        <div class="info-card">
+          <h3>🎁 Gift Vouchers</h3>
+          <p>Surprise your loved ones with customizable gift vouchers.</p>
+          <a class="learn-more" href="./services/gift-voucher.html">Learn More</a>
+        </div>
+    
+        <!-- Customer Support -->
+        <div class="info-card">
+          <h3>📞 Customer Support</h3>
+          <p>Need help? Our support team is available 24/7.</p>
+          <a class="learn-more" href="./services/support.html">Learn More</a>
+        </div>
+    
+      </div>
+    </section>
+    
+</main>
+ 
+  <footer>
+    <div class="footer-content">
+      <!-- Column 1: Social Media + Logo -->
+      <div class="footer-section social-media">
+        <div class="logo">
+          <h1>Shopee</h1>
+           </div>
+        <i class="fab fa-facebook-f"></i> Facebook</a>
+        <i class="fab fa-twitter"></i> Twitter</a>
+        <i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+        <div class="footer-section contact-info">
+        <h3>Get in Touch</h3>
+        <p>Email: support@shopee.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: 123, MG Road, Bangalore, India</p>
+      </div>
+      
+  
+      <!-- Column 3: Quick Links -->
+      <div class="footer-section menu">
+        <h3>Quick Links</h3>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="all-products.html">All Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+  
+      <!-- Column 4: Important Links -->
+      <div class="footer-section important-links">
+        <h3>Important Links</h3>
+        <nav>
+          <a href="#">Terms and Condition</a>
+          <a href="#">Shipping Details</a>
+          <a href="#">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  
+    <!-- Bottom Center Copyright -->
+    <div class="footer-bottom" style="text-align: center; padding: 10px 0; background-color: #f1f1f1;">
+      <p>&copy; 2025 Shopee. All rights reserved.</p>
+    </div>
+  </footer>
+  
+<!-- Einstein Bot Embedded Messaging -->
+<script type="text/javascript">
+  function initEmbeddedMessaging() {
+      try {
+          // Set language for the chat widget
+          embeddedservice_bootstrap.settings.language = 'en_US'; // Example: 'en' or 'en-US'
+
+          // Initialize Embedded Service
+          embeddedservice_bootstrap.init(
+              '00DNS00000cq9pJ', // Your Salesforce Org ID
+              'Shopee_Assistant', // API Name of your Embedded Service Deployment
+              'https://orgfarm-757b3dca6d-dev-ed.develop.my.site.com/ESWShopeeAssistant1762761528187', // Deployment URL
+              {
+                  scrt2URL: 'https://orgfarm-757b3dca6d-dev-ed.develop.my.salesforce-scrt.com' // Secure URL
+              }
+          );
+      } catch (err) {
+          console.error('Error loading Embedded Messaging: ', err);
+      }
+      window.addEventListener('load', initEmbeddedMessaging);
+
+  }
+</script>
+
+<!-- Load Bootstrap Script for Embedded Service -->
+<script src="//orgfarm-757b3dca6d-dev-ed.develop.my.site.com/ESWShopeeAssistant1762761528187/assets/js/bootstrap.min.js"></script>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
