@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>Shopee</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -388,33 +388,29 @@
   </footer>
   
 <!-- Einstein Bot Embedded Messaging -->
-<script type="text/javascript">
-  function initEmbeddedMessaging() {
+<script type='text/javascript'>
+    function initEmbeddedMessaging() {
       try {
-          // Set language for the chat widget
-          embeddedservice_bootstrap.settings.language = 'en_US'; // Example: 'en' or 'en-US'
-
-          // Initialize Embedded Service
-          embeddedservice_bootstrap.init(
-              '00DNS00000cq9pJ', // Your Salesforce Org ID
-              'Shopee_Assistant', // API Name of your Embedded Service Deployment
-              'https://orgfarm-757b3dca6d-dev-ed.develop.my.site.com/ESWShopeeAssistant1762761528187', // Deployment URL
-              {
-                  scrt2URL: 'https://orgfarm-757b3dca6d-dev-ed.develop.my.salesforce-scrt.com' // Secure URL
-              }
-          );
+        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+ 
+        embeddedservice_bootstrap.init(
+          '00DgL000008PwNZ',
+          'Shopee_Assistant_Messaging',
+          'https://orgfarm-975466cf9f-dev-ed.develop.my.site.com/ESWShopeeAssistantMessa1764915251620',
+          {
+            scrt2URL: 'https://orgfarm-975466cf9f-dev-ed.develop.my.salesforce-scrt.com'
+          }
+        );
       } catch (err) {
-          console.error('Error loading Embedded Messaging: ', err);
+        console.error('Error loading Embedded Messaging: ', err);
       }
-      window.addEventListener('load', initEmbeddedMessaging);
-
-  }
-</script>
-
-<!-- Load Bootstrap Script for Embedded Service -->
-<script src="//orgfarm-757b3dca6d-dev-ed.develop.my.site.com/ESWShopeeAssistant1762761528187/assets/js/bootstrap.min.js"></script>
+    };
+  </script>
+  <script type='text/javascript' src='https://orgfarm-975466cf9f-dev-ed.develop.my.site.com/ESWShopeeAssistantMessa1764915251620/assets/js/bootstrap.min.js%27 onload='initEmbeddedMessaging()'>
+  </script>
 
   
   <script src="script.js"></script>
 </body>
 </html>
+
