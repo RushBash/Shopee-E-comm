@@ -1,9 +1,33 @@
 
 // ✅ Add to Cart Alert
-function addToCart(productName) {
-  alert(`${productName} added to cart!`);
+const track = document.querySelector(".carousel-track");
+const cards = document.querySelectorAll(".product-card");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+let index = 0;
+const cardWidth = cards[0].offsetWidth + 16;
+const viewport = document.querySelector(".carousel-viewport");
+const visibleCards = Math.floor(viewport.offsetWidth / cardWidth);
+const maxIndex = cards.length - visibleCards;
+function slide() {
+ track.style.transform = `translateX(-${index * cardWidth}px)`;
 }
-
+nextBtn.addEventListener("click", () => {
+ if (index < maxIndex) {
+   index++;
+   slide();
+ }
+});
+prevBtn.addEventListener("click", () => {
+ if (index > 0) {
+   index--;
+   slide();
+ }
+});
+/* ADD TO CART */
+function addToCart(productName) {
+ alert(productName + " added to cart 🛒");
+}
 // ✅ Show Discount Popup After Page Load
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
@@ -69,3 +93,4 @@ function showDetails(service) {
 function hideDetails() {
   document.getElementById("info-modal").classList.add("hidden");
 }
+
