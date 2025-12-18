@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>Shopee</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <h1><a href="index.html">Shopee</a></h1>
@@ -20,199 +22,398 @@
     </nav>
   </header>
   <main>
-  <section class="banner">
-    <div class="banner-image">
-      <img src="./images/product_1.png" alt="Wireless Headphones">
+    <section class="banner">
+      <div class="banner-image">
+        <img src="./images/product_1.png" alt="Wireless Headphones">
+      </div>
+      <div class="banner-content">
+        <h2>Special Discount Alert!🎉</h2>
+        <p>Get up to 50% off on selected items. Limited time offer!</p>
+        <a href="all-products.html" class="banner-btn">Shop Now</a>
+      </div>
+    </section>
+    <div id="discount-popup">
+      <p>🎉 Get 10% OFF on your first order! Use code: <span class="code">WELCOME10</span></p>
+      <button onclick="closePopup()" aria-label="Close">×</button>
     </div>
-    <div class="banner-content">
-      <h2>Special Discount Alert!🎉</h2>
-      <p>Get up to 50% off on selected items. Limited time offer!</p>
-      <a href="all-products.html" class="banner-btn">Shop Now</a>
-    </div>
-  </section>
-  <div id="discount-popup">
-    <p>🎉 Get 10% OFF on your first order! Use code: <span class="code">WELCOME10</span></p>
-    <button onclick="closePopup()" aria-label="Close">×</button>
-  </div>
-  
-  
+
+
     <section class="new-arrivals">
       <h2>New Arrivals</h2>
       <div class="card-container">
-        
+
         <!-- Card 1 -->
         <div class="new-arrival-card">
-          <img src="./images/product_11.png" alt="Digital projector"/>
-          <h3>Digital projector</h3>
-          <p class="price">₹12,999</p>
-          <p class="rating">★★★★☆</p>
-          <button onclick="addToCart('Digital Projector')">Add to Cart</button>
+          <a href="product-details.html" class="card-link">
+            <img src="./images/product_11.png" alt="Digital projector" />
+            <h3>Epson Home Cinema 2250</h3>
+            <p class="price">$74999</p>
+            <p class="rating">★★★★☆</p>
+            <button onclick="addToCart('Digital Projector')">Add to Cart</button>
+          </a>
         </div>
-    
+
         <!-- Card 2 -->
         <div class="new-arrival-card image-first">
-          <img src="./images/product_12.png" alt="Wireless Bluetooth Speaker"/>  
-          <h3>Wireless Bluetooth Speaker</h3>
-          <p class="price">₹4,499</p>
-          <p class="rating">★★★☆☆</p>
-          <button onclick="addToCart('Wireless Bluetooth Speaker')">Add to Cart</button>
+          <a href="product-details.html" class="card-link">
+            <img src="./images/Samsung portable SSD.png" alt="SSD" />
+            <h3>Samsung T7 1TB SSD</h3>
+            <p class="price">$9999</p>
+            <p class="rating">★★★☆☆</p>
+            <button onclick="addToCart('SSD')">Add to Cart</button>
+          </a>
         </div>
-    
+
         <!-- Card 3 -->
         <div class="new-arrival-card">
-          <img src="./images/product_14.png" alt="Charging Cables"/>  
-          <h3>Charging Cables</h3>
-          <p class="price">₹1,999</p>
-          <p class="rating">★★★★☆</p>
-          <button onclick="addToCart('Charging Cables')">Add to Cart</button>
+          <a href="product-details.html" class="card-link">
+            <img src="./images/Croma Charging Cables 1.png" alt="Charging Cables" />
+            <h3>Croma Charging Cables</h3>
+            <p class="price">$1999</p>
+            <p class="rating">★★★★☆</p>
+            <button onclick="addToCart('Charging Cables')">Add to Cart</button>
+          </a>
         </div>
-    
+
         <!-- Card 4 -->
         <div class="new-arrival-card">
-          <img src="./images/product_15.png" alt="Smart Watc"/>
-          <h3>Mp3 Player</h3>
-          <p class="price">₹3,499</p>
-          <p class="rating">★★★★★</p>
-          <button onclick="addToCart('Mp3 Player')">Add to Cart</button>
+          <a href="product-details.html" class="card-link">
+            <img src="./images/sony walkman mp3 player.png" alt="MP3 Player" />
+            <h3>Sony Walkman MP3 Player</h3>
+            <p class="price">$3999</p>
+            <p class="rating">★★★★★</p>
+            <button onclick="addToCart('Mp3 Player')">Add to Cart</button>
+          </a>
         </div>
-    
+        <!-- Card 5 -->
+        <div class="new-arrival-card">
+          <a href="product-details.html" class="card-link">
+            <img src="./images/dji osmo tripod.png" alt="Smart Tripod" />
+            <h3>DJI OSMO Mobile Tripod</h3>
+            <p class="price">$6999</p>
+            <p class="rating">★★★★★</p>
+            <button onclick="addToCart('Smart Tripod')">Add to Cart</button>
+          </a>
+        </div>
+        <!-- Card 6 -->
+        <div class="new-arrival-card">
+          <a href="product-details.html" class="card-link">
+            <img src="./images/Xiomi Mi Fitness Band 1.png" alt="Fitness Band" />
+            <h3>Xiaomi Mi Band 8</h3>
+            <p class="price">$3999</p>
+            <p class="rating">★★★★★</p>
+            <button onclick="addToCart('Fitness Band')">Add to Cart</button>
+          </a>
+        </div>
+
       </div>
-      
+
     </section>
-    <section class="products">
+    <!-- <section class="products">
       <h2>Featured Products</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="./images/product_1.png" alt="Wireless Bluetooth Headphone"/>
-          <h3>Wireless Bluetooth Headphone</h3>
-          <p>₹7,999</p>
-          <div class="stars">
-            <div class="star filled">★</div>
-            <div class="star filled">★</div>
-            <div class="star filled">★</div>
-            <div class="star filled">★</div>
-            <div class="star">☆</div>
-      </div>
-      <button onclick="addToCart('Wireless Bluetooth Headphone')">Add to Cart</button>
-      </div>
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_1.png" alt="USB-C Hub" />
+            <h3>Anker 7-in-1 USB-C Hub</h3>
+            <p>$3999</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('USB-C Hub')">Add to Cart</button>
+          </a>
+        </div>
         <div class="product-card">
-          <img src="./images/product_2.png" alt="SmartWatch"/>
-          <h3>SmartWatch</h3>
-          <p>₹2,999</p>
-          <div class="stars">
-            <div class="star filled">★</div>
-            <div class="star filled">★</div>
-            <div class="star filled">★</div>
-            <div class="star filled">★</div>
-            <div class="star">☆</div>
-      </div>
-      <button onclick="addToCart('SmartWatch')">Add to Cart</button>
-      </div>
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_2.png" alt="Mechanical Keyboard" />
+            <h3>Keychron K2 Wireless</h3>
+            <p>$8999</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Mechanical Keyboard')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_3.png" alt="Portable Bluetooth Speaker" />
+            <h3> JBL Charge 5</h3>
+            <p>$14999</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Portable Bluetooth Speaker')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_4.png" alt="Projector" />
+            <h3>Epson Home Cinema</h3>
+            <p>$2575</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+              <div class="star">☆</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Projector')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_5.png" alt="LED Desk Lamp" />
+            <h3>Crompton LED Desk Lamp</h3>
+            <p>$799</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('LED Desk Lamp')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_6.png" alt="Portable Charger" />
+            <h3>Daily Objects Portable Charger</h3>
+            <p>$2499</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Portable Charger')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_7.png" alt="Noise Cancelling Headphones" />
+            <h3>Apple Noise-Cancelling Headphones</h3>
+            <p>$3999</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Noise Cancelling Headphones')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_8.png" alt="Wireless Keyboard" />
+            <h3>Logitech Wireless Keyboard</h3>
+            <p>$1655</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Wireless Keyboard')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_9.png" alt="Smart Watch" />
+            <h3> Apple Watch Series 9</h3>
+            <p>$41999</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html" class="product-link">
+            <img src="./images/product_10.png" alt="Wireless Bluetooth Headphones" />
+            <h3>Sony WH-1000XM5</h3>
+            <p>$19999</p>
+            <div class="stars">
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star filled">★</div>
+              <div class="star">☆</div>
+            </div>
+            <button onclick="addToCart('Wireless Bluetooth Headphones')">Add to Cart</button>
+          </a>
+        </div>
+    </section> -->
+
+
+    <section class="products">
+      <h2>Featured Products</h2>
+      <div class="carousel-wrapper">
+      <button class="nav-btn left" id="prevBtn">&#10094;</button>
+      <div class="carousel-viewport">
+      <div class="carousel-track">
+      <!-- 1 -->
       <div class="product-card">
-        <img src="./images/product_3.png" alt="Portable Charger"/>
-        <h3>Portable Charger</h3>
-        <p>₹2,149</p>
-        <div class="stars">
-          <div class="star filled">★</div>
-          <div class="star filled">★</div>
-          <div class="star filled">★</div>
-          <div class="star">☆</div>
-          <div class="star">☆</div>
-    </div>
-    <button onclick="addToCart('Portable Charger')">Add to Cart</button>
-    </div>
-    <div class="product-card">
-      <img src="./images/product_4.png" alt="Gaming Mouse"/>
-      <h3>Gaming Mouse</h3>
-      <p>₹1,700</p>
-      <div class="stars">
-        <div class="star filled">★</div>
-        <div class="star filled">★</div>
-        <div class="star">☆</div>
-        <div class="star">☆</div>
-        <div class="star">☆</div>
+      <img src="./images/Anker USD-c Hub 1.png" />
+      <h3>Anker 7-in-1 USB-C Hub</h3>
+      <p class="price">₹3999</p>
+      <div class="stars">★★★★☆</div>
+      <button onclick="addToCart('USB-C Hub')">Add to Cart</button>
+      </div>
+      <!-- 2 -->
+      <div class="product-card">
+      <img src="./images/Keychron Wireless Keyboard.png" />
+      <h3>Keychron K2 Wireless</h3>
+      <p class="price">₹8999</p>
+      <div class="stars">★★★★☆</div>
+      <button onclick="addToCart('Keychron K2')">Add to Cart</button>
+      </div>
+      <!-- 3 -->
+      <div class="product-card">
+      <img src="./images/JBL Portable Bluetooth Speaker.png" />
+      <h3>JBL Charge 5</h3>
+      <p class="price">₹14999</p>
+      <div class="stars">★★★☆☆</div>
+      <button onclick="addToCart('JBL Charge 5')">Add to Cart</button>
+      </div>
+      <!-- 4 -->
+      <div class="product-card">
+      <img src="./images/Epson Home Cinema Projector.png" />
+      <h3>Epson Home Cinema</h3>
+      <p class="price">₹2575</p>
+      <div class="stars">★★☆☆☆</div>
+      <button onclick="addToCart('Projector')">Add to Cart</button>
+      </div>
+      <!-- 5 -->
+      <div class="product-card">
+      <img src="./images/Crompton LED desk Lamp.png" />
+      <h3>Crompton LED Desk Lamp</h3>
+      <p class="price">₹799</p>
+      <div class="stars">★★★★☆</div>
+      <button onclick="addToCart('Desk Lamp')">Add to Cart</button>
+      </div>
+      <!-- 6 -->
+      <div class="product-card">
+      <img src="./images/Daily Object Portable Charger.png" />
+      <h3>Daily Objects Charger</h3>
+      <p class="price">₹2499</p>
+      <div class="stars">★★★☆☆</div>
+      <button onclick="addToCart('Power Bank')">Add to Cart</button>
+      </div>
+      <!-- 7 -->
+      <div class="product-card">
+      <img src="./images/Apple Noise Cancelling Headphone 1.png" />
+      <h3>Apple Noise Cancelling</h3>
+      <p class="price">₹3999</p>
+      <div class="stars">★★★★☆</div>
+      <button onclick="addToCart('Apple Headphones')">Add to Cart</button>
+      </div>
+      <!-- 8 -->
+      <div class="product-card">
+      <img src="./images/Logitech Wireless Keyboard.png" />
+      <h3>Logitech Wireless Keyboard</h3>
+      <p class="price">₹1655</p>
+      <div class="stars">★★★☆☆</div>
+      <button onclick="addToCart('Keyboard')">Add to Cart</button>
+      </div>
+      <!-- 9 -->
+      <div class="product-card">
+      <img src="./images/Apple Series 9 watch 1.png" />
+      <h3>Apple Watch Series 9</h3>
+      <p class="price">₹41999</p>
+      <div class="stars">★★★★☆</div>
+      <button onclick="addToCart('Apple Watch')">Add to Cart</button>
+      </div>
+      <!-- 10 -->
+      <div class="product-card">
+      <img src="./images/sony wireless headphones.png" />
+      <h3>Sony WH-1000XM5</h3>
+      <p class="price">₹19999</p>
+      <div class="stars">★★★★★</div>
+      <button onclick="addToCart('Sony XM5')">Add to Cart</button>
+      </div>
+      </div>
+      </div>
+      <button class="nav-btn right" id="nextBtn">&#10095;</button>
+      </div>
+      </section>
+<!--Trending Products-->
+<section class="trending-products">
+  <h2>Trending Products</h2>
+  <div class="trending-grid">
+  <div class="trending-card">
+  <img src="./images/TP-Link Tapo Smart Plug.png" alt="Smart Plug">
+  <h3>TP-Link Tapo Smart Plug</h3>
+  <p class="price">₹1999</p>
+  <div class="stars">★★★★☆</div>
+  <button>Add to Cart</button>
   </div>
-  <button onclick="addToCart('Gaming Mouse')">Add to Cart</button>
+  <div class="trending-card">
+  <img src="./images/Logitech Webcam.png" alt="Webcam">
+  <h3>Logitech C920 HD Pro Webcam</h3>
+  <p class="price">₹7499</p>
+  <div class="stars">★★★★☆</div>
+  <button>Add to Cart</button>
   </div>
-  <div class="product-card">
-    <img src="./images/product_5.png" alt="LED Desk Lamp"/>
-    <h3>LED Desk Lamp</h3>
-    <p>₹799</p>
-    <div class="stars">
-      <div class="star filled">★</div>
-      <div class="star filled">★</div>
-      <div class="star filled">★</div>
-      <div class="star filled">★</div>
-      <div class="star">☆</div>
-</div>
-<button onclick="addToCart('LED Desk Lamp')">Add to Cart</button>
-</div>
-<div class="product-card">
-  <img src="./images/product_6.png" alt="USB-C Hub"/>
-  <h3>USB-C Hub</h3>
-  <p>₹1,199</p>
-  <div class="stars">
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star">☆</div>
-    <div class="star">☆</div>
-</div>
-<button onclick="addToCart('USB-C Hub')">Add to Cart</button>
-</div>
-<div class="product-card">
-  <img src="./images/product_7.png" alt="Noise Cancelling Headphones"/>
-  <h3>Noise Cancelling Headphones</h3>
-  <p>₹3,999</p>
-  <div class="stars">
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star">☆</div>
-</div>
-<button onclick="addToCart('Noise Cancelling Headphones')">Add to Cart</button>
-</div>
-<div class="product-card">
-  <img src="./images/product_8.png" alt="Smart Tripod"/>
-  <h3>Smart Tripod</h3>
-  <p>₹1,999</p>
-  <div class="stars">
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star">☆</div>
-    <div class="star">☆</div>
-</div>
-<button onclick="addToCart('Smart Tripod')">Add to Cart</button>
-</div>
-<div class="product-card">
-  <img src="./images/product_9.png" alt="Projector"/>
-  <h3>Projector</h3>
-  <p>₹2,575</p>
-  <div class="stars">
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star">☆</div>
-</div>
-<button onclick="addToCart('Projector')">Add to Cart</button>
-</div>
-<div class="product-card">
-  <img src="./images/product_10.png" alt="Wireless Keyboard"/>
-  <h3>Wireless Keyboard</h3>
-  <p>₹1,655</p>
-  <div class="stars">
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star filled">★</div>
-    <div class="star">☆</div>
-</div>
-<button onclick="addToCart('Wireless Keyboard')">Add to Cart</button>
-</div>
-    </section>
+  <div class="trending-card">
+  <img src="./images/Samsung Fast charging Adapter 1.png" alt="Fast Charger">
+  <h3>Samsung 45W Super Fast Charger</h3>
+  <p class="price">₹3499</p>
+  <div class="stars">★★★★☆</div>
+  <button>Add to Cart</button>
+  </div>
+  <div class="trending-card">
+  <img src="./images/mi 2000wt power bank.png" alt="Power Bank">
+  <h3>Mi 20000mAh Power Bank</h3>
+  <p class="price">₹2499</p>
+  <div class="stars">★★★★☆</div>
+  <button>Add to Cart</button>
+  </div>
+  <div class="trending-card">
+  <img src="./images/Logitech G502 Hero Gaming Mouse 1.png" alt="Gaming Mouse">
+  <h3>Logitech G502 Hero Gaming Mouse</h3>
+  <p class="price">₹5999</p>
+  <div class="stars">★★★★★</div>
+  <button>Add to Cart</button>
+  </div>
+  <div class="trending-card">
+  <img src="./images/apple airpods pro 2 1.png" alt="AirPods">
+  <h3>Apple AirPods Pro (2nd Gen)</h3>
+  <p class="price">₹24999</p>
+  <div class="stars">★★★★★</div>
+  <button>Add to Cart</button>
+  </div>
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
     <section class="content-image-section">
       <div class="content">
         <h2>Exclusive Discount Coupon</h2>
@@ -224,7 +425,7 @@
         <img src="./images/product_13.png" alt="Gadget Image">
       </div>
     </section>
-   
+
 
 
     <section class="customer-reviews">
@@ -234,34 +435,34 @@
           <p class="review-text">Amazing service! Highly recommend to everyone.</p>
           <div class="star-rating">★★★★★</div>
           <div class="reviewer">
-            <img src="./images/person-1.jpg" alt="Client image"> 
+            <img src="./images/person-1.jpg" alt="Client image">
             <span class="reviewer-name">Priya Sharma</span>
           </div>
         </div>
-    
+
         <div class="review-card">
           <p class="review-text">Very professional and quick response time.</p>
           <div class="star-rating">★★★★☆</div>
           <div class="reviewer">
-            <img src="./images/person-5.jpg" alt="Client image"> 
+            <img src="./images/person-5.jpg" alt="Client image">
             <span class="reviewer-name">Rahul Verma</span>
           </div>
         </div>
-    
+
         <div class="review-card">
           <p class="review-text">Great experience, will come back again!</p>
           <div class="star-rating">★★★★★</div>
           <div class="reviewer">
-            <img src="./images/person-3.png" alt="Client image"> 
+            <img src="./images/person-3.png" alt="Client image">
             <span class="reviewer-name">Anita Rao</span>
           </div>
         </div>
-    
+
         <div class="review-card">
           <p class="review-text">Good support but delivery was a bit slow.</p>
           <div class="star-rating">★★★☆☆</div>
           <div class="reviewer">
-            <img src="./images/person-4.jpg" alt="Client image"> 
+            <img src="./images/person-4.jpg" alt="Client image">
             <span class="reviewer-name">Kiran Das</span>
           </div>
         </div>
@@ -278,87 +479,87 @@
     <section id="services">
       <h2 class="section-heading">Our Services</h2>
       <div class="info-card-container">
-    
+
         <!-- Fast Delivery -->
         <div class="info-card">
           <h3>🚀 Fast Delivery</h3>
           <p>Get your products quickly with same-day or next-day delivery.</p>
           <a class="learn-more" href="./services/delivery.html">Learn More</a>
         </div>
-    
+
         <!-- Easy Returns -->
         <div class="info-card">
           <h3>🔄 Easy Returns</h3>
           <p>Hassle-free returns and quick refunds for your convenience.</p>
           <a class="learn-more" href="./services/returns.html">Learn More</a>
         </div>
-    
+
         <!-- Exchange Offers -->
         <div class="info-card">
           <h3>♻️ Exchange Offers</h3>
           <p>Trade in your old gadgets for discounts on new purchases.</p>
           <a class="learn-more" href="./services/exchange.html">Learn More</a>
         </div>
-    
+
         <!-- EMI Options -->
         <div class="info-card">
           <h3>💳 EMI Options</h3>
           <p>Buy now and pay later with flexible EMI plans at zero interest.</p>
           <a class="learn-more" href="./services/emi.html">Learn More</a>
         </div>
-    
+
         <!-- Track Order -->
         <div class="info-card">
           <h3>📦 Track Order</h3>
           <p>Check your order status in real-time.</p>
           <a class="learn-more" href="./services/track.html">Learn More</a>
         </div>
-    
+
         <!-- Privacy Policy -->
         <div class="info-card">
           <h3>🔐 Privacy Policy</h3>
           <p>Your data is safe with us. Read how we protect your privacy.</p>
           <a class="learn-more" href="./services/privacy.html">Learn More</a>
         </div>
-    
+
         <!-- Gift Vouchers -->
         <div class="info-card">
           <h3>🎁 Gift Vouchers</h3>
           <p>Surprise your loved ones with customizable gift vouchers.</p>
           <a class="learn-more" href="./services/gift-voucher.html">Learn More</a>
         </div>
-    
+
         <!-- Customer Support -->
         <div class="info-card">
           <h3>📞 Customer Support</h3>
           <p>Need help? Our support team is available 24/7.</p>
           <a class="learn-more" href="./services/support.html">Learn More</a>
         </div>
-    
+
       </div>
     </section>
-    
-</main>
- 
+
+  </main>
+
   <footer>
     <div class="footer-content">
       <!-- Column 1: Social Media + Logo -->
       <div class="footer-section social-media">
         <div class="logo">
           <h1>Shopee</h1>
-           </div>
+        </div>
         <i class="fab fa-facebook-f"></i> Facebook</a>
         <i class="fab fa-twitter"></i> Twitter</a>
         <i class="fab fa-instagram"></i> Instagram</a>
       </div>
-        <div class="footer-section contact-info">
+      <div class="footer-section contact-info">
         <h3>Get in Touch</h3>
         <p>Email: support@shopee.com</p>
         <p>Phone: +91 98765 43210</p>
         <p>Address: 123, MG Road, Bangalore, India</p>
       </div>
-      
-  
+
+
       <!-- Column 3: Quick Links -->
       <div class="footer-section menu">
         <h3>Quick Links</h3>
@@ -369,7 +570,7 @@
           <a href="contact.html">Contact</a>
         </nav>
       </div>
-  
+
       <!-- Column 4: Important Links -->
       <div class="footer-section important-links">
         <h3>Important Links</h3>
@@ -380,38 +581,93 @@
         </nav>
       </div>
     </div>
-  
+
     <!-- Bottom Center Copyright -->
     <div class="footer-bottom" style="text-align: center; padding: 10px 0; background-color: #f1f1f1;">
       <p>&copy; 2025 Shopee. All rights reserved.</p>
     </div>
   </footer>
-  
-<!-- Einstein Bot Embedded Messaging -->
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DgL000008PwNZ',
-				'Shopee_Assistant_Messaging',
-				'https://orgfarm-975466cf9f-dev-ed.develop.my.site.com/ESWShopeeAssistantMessa1764915251620',
-				{
-					scrt2URL: 'https://orgfarm-975466cf9f-dev-ed.develop.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://orgfarm-975466cf9f-dev-ed.develop.my.site.com/ESWShopeeAssistantMessa1764915251620/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-  
   <script src="script.js"></script>
+  <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+        embeddedservice_bootstrap.init(
+          '00DgL000008PwNZ',
+          'Shopee_Assistant_Messaging',
+          'https://orgfarm-975466cf9f-dev-ed.develop.my.site.com/ESWShopeeAssistantMessa1764915251620',
+          {
+            scrt2URL: 'https://orgfarm-975466cf9f-dev-ed.develop.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script type='text/javascript'
+    src='https://orgfarm-975466cf9f-dev-ed.develop.my.site.com/ESWShopeeAssistantMessa1764915251620/assets/js/bootstrap.min.js'
+    onload='initEmbeddedMessaging()'></script>
+
+  <script>
+    // --- 1) Wait for the Messaging client to be ready ---
+    let messagingReady = false;
+
+    window.addEventListener("onEmbeddedMessagingReady", () => {
+      messagingReady = true;
+      console.log("Salesforce Embedded Messaging is ready.");
+    });
+
+    // --- 2) Function: set pre-chat + launch the widget ---
+    function connectWithAgent(preChat) {
+      if (!messagingReady) {
+        console.warn("Messaging not ready yet. Retrying in 500 ms…");
+        setTimeout(() => connectWithAgent(preChat), 500);
+        return;
+      }
+
+      try {
+        // IMPORTANT: These keys (_firstName, _email, _cart, _issueType)
+        // must exactly match the Channel Variable Names configured
+        // in your Messaging deployment's Pre-Chat settings.
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+          "Name": preChat?.name || "Guest",
+          "email": preChat?.email || "",
+          "cart": preChat?.cartSummary || "",
+          "issueType": preChat?.issueType || "General"
+        });
+
+        embeddedservice_bootstrap.launchChat(); // Opens the Salesforce chat widget
+        console.log("Chat launched.");
+      } catch (err) {
+        console.error("Error launching chat:", err);
+      }
+    }
+
+    // --- 3) Glue code: call this when your Topic/Flow finishes ---
+    // Replace this with your real callback from the Flow invocation.
+    function onFlowHandoffCompleted(flowOutputs) {
+      // Example: { handoffDirective: "LAUNCH_WIDGET", varName, varEmail, varCartSummary }
+      if (flowOutputs?.handoffDirective === "LAUNCH_WIDGET") {
+        // Optional: show a bot message to the user in your UI
+        if (window.botUI?.say) botUI.say("Connecting you to a support agent… Please wait.");
+
+        // Launch Salesforce Messaging with context from Flow inputs
+        connectWithAgent({
+
+          name: flowOutputs.varName,
+          email: flowOutputs.varEmail,
+          cartSummary: flowOutputs.varCartSummary,
+          issueType: "General"
+
+        });
+      }
+    }
+  </script>
+
 </body>
+
 </html>
-
-
-
